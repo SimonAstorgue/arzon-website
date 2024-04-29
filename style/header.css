@@ -1,82 +1,163 @@
-.header {
+header {
     height: 116px;
-    width: 1820px;
-    padding: 0;
-    left: 50px;
-    top: 20px;
-    position: absolute;
-}
-
-.headerbg {
+    width: 100%;
+    position: relative;
     background-color: rgba(62, 62, 62, 0.8500000238418579);
-    height: 116px;
-    width: 1820px;
-    border-radius: 20px;
     backdrop-filter: blur(4px);
 }
 
-.logoarzon {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.center {
+    margin: 0 auto;
+    width: 1440px;
+    height: 100%;
+    position: relative;
+}
+
+.logo-arzon {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+}
+
+.navigation {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     position: absolute;
-    width: 164px;
-    height: 164px;
-    left: 30px;
-    top: -5px;
+}
+
+.navigation .nav-list {
+    list-style-type: none;
+    margin: 0 auto;
+    padding-left: 5%;
+    text-align: left;
+    max-width: 80%;
+    max-height: 100%;
+}
+
+.navigation .nav-list .nav-el {
+    display: inline-block;
+    line-height: 106px;
+}
+
+.text-nav {
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-family: Kodchasan, serif;
+}
+
+.nav-list > .nav-el {
+    position: relative;
+}
+
+.nav-list > .nav-el::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 75px;
+    background: white;
 }
 
 .pp {
     width: 80px;
     height: 80px;
-    left: 1688px;
-    top: 18px;
-    position: absolute;
-    border-radius: 50%
-}
-
-.text-header {
-    position: absolute;
-    color: #ffffff;
-    font-size: 36px;
-    font-family: Kodchasan, serif;
-    font-weight: 400;
-    word-wrap: break-word;
-}
-
-#records {
-    width: 159px;
-    height: 39px;
-    left: 465px;
-    top: 39px;
-}
-
-#arzondex {
-    width: 177px;
-    height: 39px;
-    left: 665px;
-    top: 41px;
-}
-
-#home {
-    width: 143px;
-    height: 39px;
-    left: 281px;
-    top: 39px;
-}
-
-.line {
-    width: 70px;
-    height: 0;
-    top: 25px;
-    position: absolute;
-    transform: rotate(90deg);
-    transform-origin: 0 0;
-    border: 1px #ffffff solid
+    border-radius: 50%;
+    position: relative;
+    top: -50px;
+    left: 79%;
 }
 
 .settings {
     width: 40px;
     height: 40px;
-    left: 1618px;
-    top: 38px;
-    position: absolute
+    position: relative;
+    top: -65px;
+    left: 78%;
+}
+
+@media screen and (max-width: 1440px) {
+    .center {
+        width: 1080px;
+    }
+    .navigation .nav-list {
+        padding-left: 12%;
+    }
+    .text-nav {
+        padding: 16px;
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .center {
+        width: 720px;
+    }
+    .navigation .nav-list {
+        padding-left: 22%;
+    }
+    .text-nav {
+        padding: 14px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .center {
+        width: 580px;
+    }
+
+    .logo-arzon {
+        width: 110px;
+        height: 110px;
+        top: 15px;
+    }
+    .text-nav {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    header {
+        height: 86px;
+    }
+
+    .center {
+        width: 450px;
+    }
+
+    .logo-arzon {
+        width: 90px;
+        height: 90px;
+        top: 10px;
+    }
+    .navigation .nav-list .nav-el {
+        line-height: 76px;
+    }
+    .nav-list > .nav-el::before {
+        height: 55px;
+    }
+    .text-nav {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .center {
+        width: 95vw;
+    }
+    .navigation .nav-list {
+        padding-left: 90px;
+    }
+    .text-nav {
+        padding: 7px;
+        font-size: 11px;
+    }
 }
