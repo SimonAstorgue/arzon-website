@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.frontPage {
+    display: flex;
+    flex-direction: column;
+}
+
+.frontPageEl {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: #F0F6F9;
+}
+
+.topFrontPage {
+    top: 0;
+}
+
+.backgroundFilter {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.35;
+    background: rgba(99, 110, 114, 0.85);
+    z-index: 1;
+}
+
+.backgroundImage {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.videoFrontPage {
+    width: 952px;
+    height: 536px;
+    position: absolute;
+    top: 100px;
+    align-self: center;
+    border: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    filter: drop-shadow(2px 8px 10px rgba(45, 52, 54, 0.85));
+    z-index: 2;
+}
+
+.centerFrontPage {
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.imagePresentation {
+    width: auto;
+    height: 78.9%;
+    border-radius: 20px;
+    filter: drop-shadow(5px 5px 5px rgba(45, 52, 54, 0.45));
+    margin: 100px 50px auto 115px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 85px 50px 0;
+}
+
+.descriptionTitle {
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-family: 'DM Sans', serif;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 1.136;
+    color: #2D3436;
+    margin-bottom: 45px;
+}
+
+.descriptionText {
+    text-align: center;
+    overflow-wrap: break-word;
+    font-family: 'DM Sans', serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.636;
+    color: #2D3436;
+}
+
+.bottomFrontPage {
+    position: relative;
+    background-color: #DEEFF8;
+    flex-direction: column;
+    filter: drop-shadow(0 12px 12px rgba(45, 52, 54, 0.3));
+}
+
+.imageArzon {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow(0 15px 15px rgba(45, 52, 54, 0.25));
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 77vh;
+    margin-top: 50px;
+}
+
+.selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.diaporamaImage {
+    margin: auto;
+    width: auto;
+    height: 95%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 5px rgba(45, 52, 54, 0.45));
+}
+
+#img1Diaporama {
+    display: block;
+}
+#img2Diaporama {
+    display: none;
+}
+#img3Diaporama {
+    display: none;
+}
+#img4Diaporama {
+    display: none;
+}
+#img5Diaporama {
+    display: none;
+}
+
+.buttonArrow {
+    width: 50px;
+    height: 50px;
+    color: #2D3436;
+    margin: auto 20px;
+    cursor: pointer;
+    filter: drop-shadow(0 5px 5px rgba(45, 52, 54, 0.25));
+}
+
+
+@media screen and (max-width: 1080px) {
+    .videoFrontPage {
+        width: 762px;
+        height: 429px;
+    }
+
+    .centerFrontPage {
+        justify-content: normal;
+        flex-direction: column;
+    }
+    .imagePresentation {
+        height: 40%;
+        margin: 100px auto 0 auto;
+    }
+
+    .description {
+        margin: 45px 40px 0;
+    }
+
+    .descriptionTitle {
+        font-size: 44px;
+        margin-bottom: 45px;
+    }
+
+    .descriptionText {
+        font-size: 22px;
+    }
+
+    .gallery {
+        height: 50vh;
+        margin-top: 200px;
+    }
+
+    @media screen and (max-height: 700px){
+        .centerFrontPage {
+            justify-content: normal;
+            flex-direction: row;
+        }
+        .imagePresentation {
+            height: 70%;
+            margin: 100px auto 0 50px;
+        }
+
+        .description {
+            margin: 90px 40px 0;
+        }
+
+        .descriptionTitle {
+            font-size: 44px;
+            margin-bottom: 35px;
+        }
+
+        .descriptionText {
+            font-size: 22px;
+        }
+
+        .gallery {
+            height: 65vh;
+            margin-top: 100px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 800px) {
+    .videoFrontPage {
+        width: 572px;
+        height: 322px;
+    }
+
+    .imagePresentation {
+        height: 50%;
+        margin: 100px auto 0 30px;
+    }
+
+    .description {
+        margin: 80px 40px 0;
+    }
+
+    .descriptionTitle {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+
+    .descriptionText {
+        font-size: 18px;
+    }
+
+    .gallery {
+        height: 55vh;
+        margin-top: 100px;
+    }
+
+    @media screen and (max-height: 600px){
+
+        .centerFrontPage {
+            justify-content: normal;
+            flex-direction: row;
+        }
+
+        .imagePresentation {
+            height: 60%;
+            margin: 100px auto 0 50px;
+        }
+
+        .description {
+            margin: 80px 40px 0;
+        }
+
+        .descriptionTitle {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .descriptionText {
+            font-size: 16px;
+        }
+
+        .gallery {
+            height: 70vh;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .videoFrontPage {
+        width: 400px;
+        height: 225px;
+    }
+
+    .imagePresentation {
+        height: 50%;
+        margin: 100px auto 0;
+    }
+
+    .description {
+        margin: 20px 40px 0;
+    }
+
+    .descriptionTitle {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .descriptionText {
+        font-size: 15px;
+    }
+
+    .centerFrontPage {
+        flex-direction: column;
+    }
+
+    .gallery {
+        height: 40vh;
+        margin-top: 220px;
+    }
+
+    .buttonArrow {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+@media screen and (max-width: 440px) {
+    .videoFrontPage {
+        width: 340px;
+        height: 191px;
+    }
+
+    .imagePresentation {
+        height: 40%;
+        margin: 100px auto 0;
+    }
+
+    .descriptionTitle {
+        font-size: 25px;
+    }
+
+    .descriptionText {
+        font-size: 14px;
+    }
+
+    .gallery {
+        height: 30vh;
+        margin-top: 300px;
+    }
+
+}
+
+@media screen and (max-height: 440px) {
+    .videoFrontPage {
+        top: 70px;
+        width: 544px;
+        height: 305px;
+    }
+
+    .descriptionTitle {
+        font-size: 26px;
+    }
+
+    .descriptionText {
+        font-size: 14px;
+    }
+
+    .buttonArrow {
+        width: 32px;
+        height: 32px;
+    }
+
+}
+
