@@ -55,6 +55,10 @@ body {
     flex-wrap: wrap;
     row-gap: 20px;
     filter: drop-shadow(0 12px 12px rgba(45, 52, 54, 0.3));
+    @media screen and (max-width: 600px) {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 .card {
@@ -91,6 +95,11 @@ body {
 
 .big-card {
     width: auto;
+
+    @media screen and (max-width: 600px) {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 .content {
