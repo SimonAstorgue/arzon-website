@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
 body {
     margin: 0;
     padding: 0;
@@ -44,7 +43,6 @@ body {
 .add-button {
     margin: auto 0 auto 25px;
     grid-column: 1;
-
 }
 
 .edit-button {
@@ -108,7 +106,6 @@ body {
     height: 2px;
     background-color: rgba(45, 52, 54, 0.75);
     margin: 10px auto;
-
 }
 
 .podium {
@@ -262,7 +259,6 @@ body {
     .records {
         margin: 20px auto;
     }
-
     .category {
         margin: 15px auto;
     }
@@ -273,19 +269,15 @@ body {
         width: 100vw;
         margin: 25px 0;
     }
-
     .user-name {
         font-size: 20px;
     }
-
     .user-time {
         font-size: 18px;
     }
-
     .podium-step {
         width: 27vw;
     }
-
     .podium-step-text {
         font-size: 44px;
     }
