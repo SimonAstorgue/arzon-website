@@ -39,6 +39,21 @@
     margin: 1px 15px 1px 0;
     display: block;
     overflow-wrap: break-word;
+    padding: 0 5px;
+    border-radius: 20px;
+}
+
+.textMenu-hover {
+    background-color: rgba(45, 52, 54, 1.0) !important;
+    color: #F0F6F9 !important;
+    transition: all 0.3s ease, color 0.3s ease;
+    box-shadow: 2px 3px 0 #636e72;
+}
+
+.textMenu:active {
+    box-shadow: 0 0 0 #636e72;
+    position: relative;
+    top: 2px;
 }
 
 .menuIcon {
@@ -73,7 +88,7 @@
 
 .settings {
     margin: auto 10px auto 5px;
-    display: block;
+    display: none;
     width: 20px;
     height: 20px;
     cursor: pointer;

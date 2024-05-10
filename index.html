@@ -5,12 +5,16 @@
     <title>Arzon2-0</title>
 
     <link rel="stylesheet" href="assets/style/main-page.css">
-    <link rel="stylesheet" href="assets/style/header.css">
+    <link rel="stylesheet" href="assets/style/header/header-main.css">
     <link rel="stylesheet" href="assets/style/footer.css">
 
     <script src="layouts/header.js"></script>
-    <script src="features/header.js"></script>
+
+    <script src="features/header/scroll-header.js"></script>
+    <script src="features/header/header.js"></script>
     <script src="features/footer.js"></script>
+
+    <script type="module" src="./features/gallery.js"></script>
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,10 +70,6 @@
         </div>
         <div class="backgroundFilter"></div>
         <img src="assets/img/background.jpg" class="backgroundImage" alt="">
-        <!--    <iframe class="videoFrontPage" src="https://www.youtube.com/embed/xQITPKGvy2g?si=wxTgb-ntI3yGTHSy"-->
-        <!--            title="Arzon Best-OF"-->
-        <!--            allow="accelerometer; autoplay; clipboard-write; encrypted-media"-->
-        <!--            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
         <div class="videoFrontPage">
             <iframe allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
                     src="https://player.vimeo.com/video/943308608?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
@@ -98,7 +98,7 @@
     <div class="frontPageEl bottomFrontPage">
         <img src="assets/img/arzon.jpg" class="imageArzon" alt=""/>
         <div class="carousel">
-            <div class="gallery">
+            <div id="gallery" class="gallery js-flickity">
                 <img src="assets/img/gallery/img1.jpg" alt="" class="diaporamaImage" id="img1Diaporama"/>
                 <img src="assets/img/gallery/img2.jpg" alt="" class="diaporamaImage" id="img2Diaporama"/>
                 <img src="assets/img/gallery/img3.jpg" alt="" class="diaporamaImage" id="img3Diaporama"/>
@@ -106,14 +106,18 @@
                 <img src="assets/img/gallery/img5.jpg" alt="" class="diaporamaImage" id="img5Diaporama"/>
             </div>
             <div class="selector">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                     stroke="currentColor" class="buttonArrow">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                     stroke="currentColor" class="buttonArrow">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
-                </svg>
+                <button id="left-selector" class="buttonSelector">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="buttonArrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5"/>
+                    </svg>
+                </button>
+                <button id="right-selector" class="buttonSelector">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="buttonArrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
