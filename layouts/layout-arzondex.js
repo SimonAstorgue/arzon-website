@@ -70,9 +70,9 @@ function editCard() {
 
 const toggleImage = document.getElementById('toggleImage');
 const ocean = document.querySelector('.ocean');
+let test = false;
 
-
-toggleImage.addEventListener('click', function () {
+toggleImage.addEventListener('click', async function () {
     if (ocean.style.display === 'block') {
         ocean.style.display = 'none';
     } else {
@@ -81,6 +81,19 @@ toggleImage.addEventListener('click', function () {
             top: ocean.offsetTop + ocean.offsetHeight - window.innerHeight,
             behavior: 'smooth'
         });
+    }
+});
+
+document.addEventListener('scroll', function () {
+    if (ocean.style.display === 'block') {
+        const scroll = window.scrollY + window.innerHeight;
+        if (!test && Math.floor(scroll) >= ocean.offsetTop + (ocean.offsetHeight / 2)) {
+            test = true;
+        }
+        if (test && scroll <= ocean.offsetTop) {
+            ocean.style.display = 'none';
+            test = false;
+        }
     }
 });
 
