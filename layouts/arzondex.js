@@ -1,6 +1,6 @@
 let inEditMode = false;
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const noCards = document.getElementById('arzondexNoCard');
     const cards = document.getElementsByClassName('card');
 
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 success: (data) => {
                     const [button] = $(data);
                     if (button) {
-                        button.addEventListener('click', async() => {
+                        button.addEventListener('click', async () => {
                             content.remove();
                         });
                         content.appendChild(button);
@@ -66,22 +66,4 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         }
     }
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    var toggleImage = document.getElementById('toggleImage');
-    var ocean = document.querySelector('.ocean');
-
-
-    toggleImage.addEventListener('click', function() {
-        if (ocean.style.display === 'block') {
-            ocean.style.display = 'none';
-        } else {
-            ocean.style.display = 'block';
-            window.scrollTo({
-                top: ocean.offsetTop + ocean.offsetHeight - window.innerHeight,
-                behavior: 'smooth'
-            });
-        }
-    });
 });
