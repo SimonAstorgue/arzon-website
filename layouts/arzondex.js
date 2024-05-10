@@ -67,3 +67,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var toggleImage = document.getElementById('toggleImage');
+    var ocean = document.querySelector('.ocean');
+
+
+    toggleImage.addEventListener('click', function() {
+        if (ocean.style.display === 'block') {
+            ocean.style.display = 'none';
+        } else {
+            ocean.style.display = 'block';
+            window.scrollTo({
+                top: ocean.offsetTop + ocean.offsetHeight - window.innerHeight,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
