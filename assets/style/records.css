@@ -80,9 +80,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 600px;
-    min-width: 440px;
-    width: 100%;
+    width: 600px;
     font-family: 'DM Sans', serif;
     border-radius: 25px;
     background-color: #74B9FF;
@@ -181,7 +179,6 @@ body {
     flex-direction: column;
     align-items: center;
     max-width: 150px;
-    min-width: 120px;
     width: clamp(120px, 150px, 150px);
     background-color: #2D3436;
     border-radius: 15px 15px 0 0;
@@ -258,7 +255,7 @@ body {
     cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 680px) {
     .records {
         margin: 20px auto;
     }
@@ -268,9 +265,18 @@ body {
     }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 600px) {
     .category {
         width: 100vw;
+    }
+
+    .podium-step {
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .category {
         margin: 25px 0;
     }
 
@@ -283,7 +289,7 @@ body {
     }
 
     .podium-step {
-        width: 27vw;
+        width: 25vw;
     }
 
     .podium-step-text {
